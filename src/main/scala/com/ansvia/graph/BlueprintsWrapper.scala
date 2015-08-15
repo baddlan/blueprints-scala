@@ -18,7 +18,7 @@ import scala.reflect.runtime.universe._
 object BlueprintsWrapper {
     import scala.collection.JavaConversions._
 
-    val defaultClassloader = CallersContext.fetchDefaultClassLoader
+    var defaultClassloader = CallersContext.fetchDefaultClassLoader
 
 
     case class ScalasticPropertyAccessor[A <: Element : ClassTag](var obj:A) {
